@@ -21,7 +21,7 @@ import org.xml.sax.SAXException;
 
 import slmt.dcard.recommender.util.PropertiesFetcher;
 
-public class SinicaXMLParser {
+class SinicaXMLParser {
 
 	private static final String SINICA_ACCOUNT_NAME;
 	private static final String SINICA_ACCOUNT_PASSWORD;

@@ -8,11 +8,11 @@ public class SinicaOnlineTokenizer {
 	public static LinkedList<SinicaToken> tokenize(String target) {
 		String sendXML = SinicaXMLParser.toXML(target);
 		String resultXML = SinicaConnecter.sendAndReceive(sendXML);
-		SinicaXMLParser.retrieveFromXML(resultXML);
-		return new LinkedList<SinicaToken>();
+		String resultText = SinicaXMLParser.retrieveFromXML(resultXML);
+		return convertToList(resultText);
 	}
 
-	public static LinkedList<SinicaToken> convertToList(String target) {
+	private static LinkedList<SinicaToken> convertToList(String target) {
 		LinkedList<SinicaToken> result = new LinkedList<SinicaToken>();
 		
 		// The target string will be something like "我(N)　愛(V)　自己(N)"

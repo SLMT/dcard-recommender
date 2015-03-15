@@ -8,7 +8,7 @@ import java.net.Socket;
 
 import slmt.dcard.recommender.util.PropertiesFetcher;
 
-public class SinicaConnecter {
+class SinicaConnecter {
 
 	private static final String SINICA_SERVER_IP;
 	private static final int SINICA_SERVER_PORT;
